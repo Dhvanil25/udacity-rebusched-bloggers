@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Python Blog - Signup</title>
+</head>
+
+<style type="text/css">
+	body {
+		position: relative;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 14px;
+
+		width: 800px;
+		margin: 0 auto;
+		padding: 10px;
+		color: #333;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.error {    
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-bottom: 20px; 
+		color: red;
+	}
+
+	label {
+	  display: block;
+	  font-size: 20px;
+	}
+
+	label + label {
+		margin-top: 20px;
+	}
+
+	input[type=text] {
+		width: 500px;
+		font-size: 20px;
+		padding: 2px;
+		font-family: monospace;
+	}
+
+	input[type=password] {
+		width: 500px;
+		font-size: 20px;
+		padding: 2px;
+		font-family: monospace;
+	}
+
+	textarea {
+	  width: 500px;
+	  height: 200px;
+	  font-size: 20px;
+	  padding: 2px;
+	  font-family: monospace;
+	}
+
+	input[type=submit] {
+	  font-size: 12 px;
+	}
+
+	.main-title {
+		display: block;
+		color: #222;
+		font-size: 40px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30px;
+		text-decoration: none;
+	}
+
+	.post + .post {
+		margin-top: 15px;
+	}
+
+	.post-heading {
+		position: relative;
+		border-bottom: 3px solid #666;
+	}
+
+	.post-title {
+		font-size: 24px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #333;
+	}
+
+	.post-title:visisted {
+		color: #333;
+	}
+
+	.post-date {
+		position: relative;
+		font-size: 12px;
+		right: 0px;
+		bottom: 0px;
+		color: #999;
+	}
+
+	.post-content {
+		margin-top: 5px;
+	}
+
+	.age {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		color: gray;
+		font-size: 12px;
+	}
+</style>
+
+<body>
+  <a href="/" class="main-title">The Python Blog</a>
+  <h2>Signup</h2>
+  <div class="form">
+  	<form method="post">
+      <label>
+          <div>Username</div>
+          <input type="text" name="username" value="{{username}}">
+		  <div class="error">{{error_username}}</div>
+      </label>
+      <label>
+          <div>Password</div>
+          <input type="password" name="password" value="">
+		  <div class="error">{{error_password}}</div>
+      </label>
+      <label>
+          <div>Password</div>
+          <input type="password" name="verify" value="">
+		  <div class="error">{{error_verify}}</div>
+      </label>
+      <label>
+          <div>Email (optional)</div>
+          <input type="text" name="email" value="{{email}}">
+		  <div class="error"></div>
+      </label>
+      <div class="error">{{error_email}}</div>
+      <label>
+        <input type="submit">
+      </label>
+    </form>
+	</div>
+</body>
+</html>
